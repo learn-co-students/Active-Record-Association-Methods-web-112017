@@ -13,3 +13,7 @@ DB = ActiveRecord::Base.connection
 if ENV["PLAYLISTER_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+require "rails_erd/diagram/graphviz"
+
+RailsERD::Diagram::Graphviz.create
